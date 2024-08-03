@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcus & Cindy's Wedding</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/skatepark" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+        @import url('https://fonts.cdnfonts.com/css/skatepark');
+
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f9f5f0;
+            color: #333;
+            font-family: 'Thirsty', serif;
+            font-style: italic;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, p {
+            margin: 0;
+            font-family: 'Thirsty', serif;
+            font-style: italic;
+            color: #4b5320;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: linear-gradient(145deg, #d4af37, #f4d03f);
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #b8860b;
+            transform: scale(1.05);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            text-align: center;
+            color: #f7f7f7;
+            height: 100vh;
+            overflow: hidden;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/mc.jpg') no-repeat center center/cover;
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero-content h1 {
+            font-size: 6em;
+            margin: 10px 0;
+            font-family: 'Dancing Script', cursive;
+            color: #d4af37;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            letter-spacing: 0.1em;
+        }
+
+        .hero-content h2 {
+            font-size: 3em;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content p {
+            font-size: 2em;
+            margin-top: 10px;
+            color: #f7f7f7;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content button {
+            margin-top: 20px;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Countdown Section */
+        .countdown-section {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: #f7f0d1;
+            background-image: url('https://scontent.fmel18-1.fna.fbcdn.net/v/t1.6435-9/83395155_1553768644771010_5143620243477757952_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=13d280&_nc_ohc=oGgy3Hosv0sQ7kNvgHAPsYO&_nc_ht=scontent.fmel18-1.fna&oh=00_AYA1jyxp2LZZXUmtfCHA4lnEYLPE5eCAMmgN_l5PuNBJbA&oe=66C7292A');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-top: 5px solid #d4af37;
+            border-bottom: 5px solid #d4af37;
+        }
+
+        .countdown-section h2 {
+            margin-bottom: 30px;
+            color: #caa156;
+            font-size: 2.5em;
+        }
+
+        #countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .timer-item {
+            font-size: 1.5em;
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            flex: 1 1 150px;
+        }
+
+        .timer-item span {
+            display: block;
+            font-size: 2em;
+            color: #d4af37;
+        }
+
+        /* Events Section */
+        .events-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 60px 20px;
+            background-color: #4b5320;
+            color: #fff;
+            background-image: url('https://www.transparenttextures.com/patterns/light-aluminum.png');
+        }
+
+        .event-item {
+            flex: 1 1 300px;
+            max-width: 300px;
+            text-align: center;
+            margin: 20px;
+            transition: transform 0.3s ease;
+            background-color: #384931;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .event-item:hover {
+            transform: scale(1.05);
+        }
+
+        .event-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .event-item h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            color: #d4af37;
+        }
+
+        .event-item p {
+            font-size: 1.2em;
+            color: #f7f7f7;
+        }
+
+        /* RSVP Section */
+        .rsvp-section {
+            padding: 60px 20px;
+            background-color: #EBE8E1;
+            color: #f7f7f7;
+            text-align: center;
+            border-top: 5px solid #d4af37;
+            border-bottom: 5px solid #d4af37;
+        }
+
+        .rsvp-section h2 {
+            margin-bottom: 30px;
+            color: #384931;
+            font-size: 2.5em;
+        }
+
+        #rsvp-form {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: left;
+            background: transparent;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #rsvp-form label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #384931;
+        }
+
+        #rsvp-form input, #rsvp-form select, #rsvp-form textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            border-color: #AA8D5A;
+            outline: #e6d386;
+            background-color: #f5f0cc;
+            color: #4b5320;
+        }
+
+        #rsvp-form textarea {
+            resize: vertical;
+        }
+
+        #rsvp-form button {
+            width: 100%;
+        }
+
+        /* Footer Section */
+        .footer-section {
+            text-align: center;
+            padding: 20px;
+            background-color: #384931;
+            color: #fff;
+        }
+
+        .footer-section p {
+            margin: 0;
+            font-size: 1em;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 4em;
+            }
+
+            .hero-content p {
+                font-size: 2em;
+            }
+
+            .timer-item {
+                font-size: 1.2em;
+                padding: 15px;
+            }
+
+            .event-item {
+                margin: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 3em;
+            }
+
+            .hero-content p {
+                font-size: 1.5em;
+            }
+
+            .timer-item {
+                font-size: 1em;
+                padding: 10px;
+            }
+
+            .event-item {
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>Marcus & Cindy</h1>
+            <h2>Wedding Celebration</h2>
+            <p class="italic-text">January 15, 2025</p>
+            <p>Sheraton Saigon Grand Opera Hotel, Vietnam</p>
+            <button onclick="document.getElementById('rsvp-section').scrollIntoView({ behavior: 'smooth' })">RSVP Now</button>
+        </div>
+    </header>
+
+    <!-- Countdown Timer -->
+    <section class="countdown-section">
+        <h2>Countdown to Our Wedding</h2>
+        <div id="countdown-timer">
+            <div class="timer-item">
+                <span id="days"></span>
+                <p>Days</p>
+            </div>
+            <div class="timer-item">
+                <span id="hours"></span>
+                <p>Hours</p>
+            </div>
+            <div class="timer-item">
+                <span id="minutes"></span>
+                <p>Minutes</p>
+            </div>
+            <div class="timer-item">
+                <span id="seconds"></span>
+                <p>Seconds</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Details Section -->
+    <section class="events-section">
+        <div class="event-item">
+            <img src="https://images.trvl-media.com/lodging/1000000/920000/910900/910861/a3a04af4.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill" alt="Ceremony">
+            <h3>Ceremony & Reception</h3>
+            <p>Join us for the wedding ceremony and dinner starting at 6:00 PM.</p>
+        </div>
+        <div class="event-item">
+            <img src="https://images.unsplash.com/photo-1529720317453-c8da503f2051?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Reception">
+            <h3>Dress Code</h3>
+            <p>Cocktail Attire</p>
+        </div>
+        <div class="event-item">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/444758206.jpg?k=88220cdea075266dd7203ca617c2d820a0cd63a200c8fa21e06a9b3cece6cd32&o=&hp=1" alt="After Party">
+            <h3>Plans</h3>
+            <p>The fun continues with a paid for 3 days and 2 nights celebration at TIEN DAT RESORT & SPA, January 16-18</p>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section id="rsvp-section" class="rsvp-section">
+        <h2>RSVP</h2>
+        <form id="rsvp-form">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="attending">Will you be attending?</label>
+            <select id="attending" name="attending" required>
+                <option value="Both">Yes to both.</option>
+                <option value="Wedding Only">Yes to wedding only.</option>
+                <option value="No">No</option>
+            </select>
+
+            <label for="message">Dietary Requirements</label>
+            <textarea id="message" name="message" rows="4" placeholder=""></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <p>&copy; 2024 EJC</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize EmailJS
+            emailjs.init('EIjqfWc7LYd0c_i3c'); // Your public key
+
+            // Countdown Timer
+            const weddingDate = new Date('January 15, 2025 18:00:00').getTime();
+            const countdownInterval = setInterval(() => {
+                const now = new Date().getTime();
+                const distance = weddingDate - now;
+
+                if (distance < 0) {
+                    clearInterval(countdownInterval);
+                    document.getElementById('countdown-timer').innerHTML = "The wedding has started!";
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById('days').innerText = days;
+                document.getElementById('hours').innerText = hours;
+                document.getElementById('minutes').innerText = minutes;
+                document.getElementById('seconds').innerText = seconds;
+            }, 1000);
+
+            // RSVP Form Submission
+            document.getElementById('rsvp-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                const serviceID = 'service_88yfsh7';
+                const templateID = 'template_fh4iizq';
+
+                const name = document.getElementById('name').value;
+                const attending = document.getElementById('attending').value;
+                const message = document.getElementById('message').value;
+
+                // Basic form validation
+                if (!name || !attending) {
+                    alert('Please fill in all fields.');
+                    return;
+                }
+
+                const templateParams = {
+                    name: name,
+                    attending: attending,
+                    message: message
+                };
+
+                emailjs.send(serviceID, templateID, templateParams)
+                    .then(() => {
+                        alert('RSVP sent successfully!');
+                        document.getElementById('rsvp-form').reset();
+                    }, (error) => {
+                        console.error('Error sending RSVP:', error);
+                        alert('There was an error sending your RSVP. Please try again later.');
+                    });
+            });
+        });
+    </script>
+</body>
+</html>
